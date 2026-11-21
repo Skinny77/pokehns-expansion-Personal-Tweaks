@@ -2900,7 +2900,7 @@ static void SetPartyMonSelectionActions(struct Pokemon *mons, u8 slotId, u8 acti
     {
         SetPartyMonFieldSelectionActions(mons, slotId);
     }
-    else if (action == ACTIONS_MOVES_SUB && P_PARTY_MOVE_RELEARNER)
+    else if (action == ACTIONS_MOVES_SUB)
     {
         sPartyMenuInternal->numActions = 0;
         SetPartyMonLearnMoveSelectionActions(mons, slotId);
@@ -2927,8 +2927,7 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
     sPartyMenuInternal->numActions = 0;
     AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_SUMMARY);
 
-    if (P_PARTY_MOVE_RELEARNER
-     && GetMonData(&mons[slotId], MON_DATA_SPECIES)
+    if (GetMonData(&mons[slotId], MON_DATA_SPECIES)
      && CanBoxMonRelearnAnyMove(&mons[slotId].box))
     {
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, MENU_SUB_MOVES);
