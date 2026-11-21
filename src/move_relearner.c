@@ -1175,10 +1175,13 @@ static u32 GetRelearnerLevelUpMoves(struct BoxPokemon *mon, u16 *moves)
     if (species == SPECIES_EGG)
         return 0;
 
-    u32 level = (P_ENABLE_ALL_LEVEL_UP_MOVES ? MAX_LEVEL : GetLevelFromBoxMonExp(mon));
+    u32 level = GetLevelFromBoxMonExp(mon);
+    u32 evoSpecies = species;
+
+    // 1. Add level-up moves up to the Pokémon's current level (plus pre-evolutions if enabled)
     do
     {
-        const struct LevelUpMove *learnset = GetSpeciesLevelUpLearnset(species);
+        const struct LevelUpMove *learnset = GetSpeciesLevelUpLearnset(evoSpecies);
 
         for (u32 i = 0; i < MAX_LEVEL_UP_MOVES && learnset[i].move != LEVEL_UP_MOVE_END; i++)
         {
@@ -1192,14 +1195,46 @@ static u32 GetRelearnerLevelUpMoves(struct BoxPokemon *mon, u16 *moves)
             for (u32 j = 0; j < numMoves; j++)
             {
                 if (learnset[i].move == moves[j])
+                {
                     alreadyInList = TRUE;
+                    break;
+                }
             }
-            if (!alreadyInList)
+
+            if (!alreadyInList && numMoves < MAX_RELEARNER_MOVES)
                 moves[numMoves++] = learnset[i].move;
         }
 
-        species = (P_PRE_EVO_MOVES ? GetSpeciesPreEvolution(species) : SPECIES_NONE);
-    } while (species != SPECIES_NONE);
+        evoSpecies = (P_PRE_EVO_MOVES ? GetSpeciesPreEvolution(evoSpecies) : SPECIES_NONE);
+    } while (evoSpecies != SPECIES_NONE && numMoves < MAX_RELEARNER_MOVES);
+
+    // 2. Append egg moves from the base species in the evolution line
+    u32 eggSpecies = species;
+    while (GetSpeciesPreEvolution(eggSpecies) != SPECIES_NONE)
+        eggSpecies = GetSpeciesPreEvolution(eggSpecies);
+
+    const u16 *eggMoves = GetSpeciesEggMoves(eggSpecies);
+    if (eggMoves != sNoneEggMoveLearnset)
+    {
+        for (u32 i = 0; eggMoves[i] != MOVE_UNAVAILABLE && numMoves < MAX_RELEARNER_MOVES; i++)
+        {
+            if (BoxMonKnowsMove(mon, eggMoves[i]))
+                continue;
+
+            bool32 alreadyInList = FALSE;
+            for (u32 j = 0; j < numMoves; j++)
+            {
+                if (eggMoves[i] == moves[j])
+                {
+                    alreadyInList = TRUE;
+                    break;
+                }
+            }
+
+            if (!alreadyInList)
+                moves[numMoves++] = eggMoves[i];
+        }
+    }
 
     if (P_SORT_MOVES)
         SortMovesAlphabetically(moves, numMoves);
@@ -1329,31 +1364,8 @@ bool32 CanBoxMonRelearnMoves(struct BoxPokemon *boxMon, enum MoveRelearnerStates
 
 static bool32 HasRelearnerLevelUpMoves(struct BoxPokemon *boxMon)
 {
-    u32 species = GetBoxMonData(boxMon, MON_DATA_SPECIES_OR_EGG);
-
-    if (species == SPECIES_EGG)
-        return FALSE;
-
-    u32 level = (P_ENABLE_ALL_LEVEL_UP_MOVES == TRUE) ? MAX_LEVEL : GetLevelFromBoxMonExp(boxMon);
-
-    do
-    {
-        const struct LevelUpMove *learnset = GetSpeciesLevelUpLearnset(species);
-
-        for (u32 i = 0; i < MAX_LEVEL_UP_MOVES && learnset[i].move != LEVEL_UP_MOVE_END; i++)
-        {
-            if (learnset[i].level > level)
-                break;
-
-            if (!BoxMonKnowsMove(boxMon, learnset[i].move))
-                return TRUE;
-        }
-
-        species = (P_PRE_EVO_MOVES ? GetSpeciesPreEvolution(species) : SPECIES_NONE);
-
-    } while (species != SPECIES_NONE);
-
-    return FALSE;
+    u16 tempMoves[MAX_RELEARNER_MOVES];
+    return GetRelearnerLevelUpMoves(boxMon, tempMoves) > 0;
 }
 
 static bool32 HasRelearnerEggMoves(struct BoxPokemon *boxMon)
