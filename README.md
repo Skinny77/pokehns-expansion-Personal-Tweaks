@@ -1,3 +1,11 @@
+>This is my personal tweaked version of Pokemon Heart & Soul, adding some features that make the game more aligned with my interests:
+>
+>1. Adding the relearn move option to the pokemon menu - done
+>2. Adding sinnoh pokemon to base game - in progress
+>3. Adding option to obtain sinnoh starters - planned
+>4. ability to set your starter - planned
+
+
 ![HnS Logo](HnS_Logo.png)
 
 # About `pokemonHnS-expansion`
