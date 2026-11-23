@@ -40215,17 +40215,17 @@
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_BUTTERFREE"
+                "species": "SPECIES_BURMY"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_BEEDRILL"
+                "species": "SPECIES_COMBEE"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_BEEDRILL"
+                "species": "SPECIES_CHERUBI"
               }
             ]
           },
@@ -40399,17 +40399,17 @@
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_BUTTERFREE"
+                "species": "SPECIES_BURMY"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_BEEDRILL"
+                "species": "SPECIES_COMBEE"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_BEEDRILL"
+                "species": "SPECIES_CHERUBI"
               }
             ]
           },
@@ -41272,6 +41272,36 @@
                 "species": "SPECIES_SCYTHER"
               }
             ]
+          },
+          "rock_smash_mons": {
+            "encounter_rate": 60,
+            "mons": [
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_PINECO"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_BURMY"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_COMBEE"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_CHERUBI"
+              }
+            ]
           }
         },
         {
@@ -41339,6 +41369,36 @@
                 "min_level": 16,
                 "max_level": 16,
                 "species": "SPECIES_SCYTHER"
+              }
+            ]
+          },
+          "rock_smash_mons": {
+            "encounter_rate": 60,
+            "mons": [
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_PINECO"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_EXEGGCUTE"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_BURMY"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_COMBEE"
+              },
+              {
+                "min_level": 14,
+                "max_level": 16,
+                "species": "SPECIES_CHERUBI"
               }
             ]
           }
@@ -70104,17 +70164,17 @@
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_HERACROSS"
+                "species": "SPECIES_BURMY"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_AIPOM"
+                "species": "SPECIES_COMBEE"
               },
               {
                 "min_level": 10,
                 "max_level": 10,
-                "species": "SPECIES_AIPOM"
+                "species": "SPECIES_CHERUBI"
               }
             ]
           }
