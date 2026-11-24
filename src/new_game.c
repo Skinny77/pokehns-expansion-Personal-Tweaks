@@ -2,6 +2,7 @@
 #include "new_game.h"
 #include "random.h"
 #include "config/randomizer.h"
+#include "config/dexnav.h"
 #include "pokemon.h"
 #include "roamer.h"
 #include "pokemon_size_record.h"
@@ -32,7 +33,6 @@
 #include "pokedex.h"
 #include "apprentice.h"
 #include "frontier_util.h"
-#include "pokedex.h"
 #include "save.h"
 #include "link_rfu.h"
 #include "main.h"
@@ -297,6 +297,13 @@ void NewGameInitData(void)
     ResetItemFlags();
     ResetDexNav();
     ClearFollowerNPCData();
+
+#if DEXNAV_ENABLED == TRUE
+    if (DN_FLAG_DEXNAV_GET != 0)
+        FlagSet(DN_FLAG_DEXNAV_GET);
+    if (DN_FLAG_DETECTOR_MODE != 0)
+        FlagSet(DN_FLAG_DETECTOR_MODE);
+#endif
 
     // Sync engine flags from restored challenge settings
     if (!gSaveBlock3Ptr->challengeSettings.tx_Mode_Mints)
