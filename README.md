@@ -4,6 +4,7 @@
 >2. Adding sinnoh pokemon to base game - in progress
 >3. Adding option to obtain sinnoh starters - planned
 >4. ability to set your starter - planned
+>5. Enable the Dexnav - Done
 
 
 ![HnS Logo](HnS_Logo.png)
