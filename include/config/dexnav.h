@@ -8,8 +8,8 @@
 #define DN_FLAG_SEARCHING             0x304  // Searching for mon (unused HnS flag slot)
 #define DN_FLAG_DEXNAV_GET            0x305  // DexNav shows in start menu (unused HnS flag slot)
 #define DN_FLAG_DETECTOR_MODE         0x306  // Allow player to find hidden mons (unused HnS flag slot)
-#define DN_VAR_SPECIES                VAR_DEXNAV_SPECIES       // Registered DexNav species
-#define DN_VAR_STEP_COUNTER           VAR_DEXNAV_STEP_COUNTER  // Steps for finding hidden pokemon
+#define DN_VAR_SPECIES                0x40F7 // Registered DexNav species (VAR_UNUSED_HNS_0x40F7)
+#define DN_VAR_STEP_COUNTER           0x40F8 // Steps for finding hidden pokemon (VAR_UNUSED_HNS_0x40F8)
 
 // Search parameters
 #define DEXNAV_TIMEOUT                  15  // 15 seconds is the time out. Max of 1092 seconds allowed
