@@ -36587,7 +36587,7 @@
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_STARLY"
+                "species": "SPECIES_PIDGEY"
               },
               {
                 "min_level": 2,
@@ -36597,12 +36597,12 @@
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_WURMPLE"
+                "species": "SPECIES_PIDGEY"
               },
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_HOPPIP"
+                "species": "SPECIES_SENTRET"
               },
               {
                 "min_level": 2,
@@ -36617,22 +36617,22 @@
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_BUDEW"
+                "species": "SPECIES_WURMPLE"
               },
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_SENTRET"
+                "species": "SPECIES_WURMPLE"
               },
               {
                 "min_level": 2,
                 "max_level": 2,
-                "species": "SPECIES_RATTATA"
+                "species": "SPECIES_STARLY"
               },
               {
                 "min_level": 2,
                 "max_level": 2,
-                "species": "SPECIES_POOCHYENA"
+                "species": "SPECIES_STARLY"
               },
               {
                 "min_level": 2,
@@ -36696,12 +36696,12 @@
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_RATTATA_ALOLA"
+                "species": "SPECIES_RATTATA"
               },
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_SPINARAK"
+                "species": "SPECIES_MURKROW"
               },
               {
                 "min_level": 2,
@@ -36711,7 +36711,7 @@
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_BIDOOF"
+                "species": "SPECIES_KRICKETOT"
               },
               {
                 "min_level": 2,
@@ -36721,17 +36721,17 @@
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_MEOWTH"
+                "species": "SPECIES_PURRLOIN"
               },
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_MURKROW"
+                "species": "SPECIES_RATTATA_ALOLA"
               },
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_MURKROW"
+                "species": "SPECIES_RATTATA_ALOLA"
               },
               {
                 "min_level": 2,
@@ -36741,7 +36741,7 @@
               {
                 "min_level": 2,
                 "max_level": 3,
-                "species": "SPECIES_SNEASEL"
+                "species": "SPECIES_MISDREAVUS"
               }
             ]
           },
