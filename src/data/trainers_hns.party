@@ -7176,18 +7176,58 @@ Double Battle: No
 AI: Basic Trainer
 Mugshot: Light Blue
 
-Pidgey
-Level: 8
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Sand Attack
+Skarmory @ Sharp Beak
+Level: 10
+Ability: Sturdy
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Stealth Rock
+- Metal Claw
+- Peck
+- Roost
+
+Starly @ Sitrus Berry
+Level: 9
+Ability: Keen Eye
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Wing Attack
+- Quick Attack
+- Feather Dance
+- Leer
+
+Gligar @ Poison Barb
+Level: 10
+Ability: Hyper Cutter
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Knock Off
+- Mud-Slap
+- Poison Sting
 - Quick Attack
 
-Noctowl @ Sitrus Berry
+Taillow @ Flame Orb
+Level: 9
+Ability: Guts
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Peck
+- Quick Attack
+- U-turn
+- Work Up
+
+Murkrow @ Scope Lens
+Level: 9
+Ability: Prankster
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Pursuit
+- Peck
+- Swagger
+- Torment
+
+Noctowl @ Focus Sash
 Level: 11
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Mud Slap
+Ability: Tinted Lens
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+- Hypnosis
+- Roost
+- Confusion
 - Peck
 
 === TRAINER_FALKNER_2_HNS ===
