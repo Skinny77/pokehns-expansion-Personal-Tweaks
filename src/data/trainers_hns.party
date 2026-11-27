@@ -7177,7 +7177,7 @@ AI: Basic Trainer
 Mugshot: Light Blue
 
 Skarmory @ Sharp Beak
-Level: 10
+Level: 9
 Ability: Sturdy
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Spikes
@@ -7185,14 +7185,14 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Peck
 - Leer
 
-Starly @ Sitrus Berry
-Level: 9
+Wingull @ Mystic Water
+Level: 10
 Ability: Keen Eye
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Wing Attack
+- Water Gun
 - Quick Attack
-- Feather Dance
-- Leer
+- U-Turn
 
 Gligar @ Poison Barb
 Level: 10
@@ -7209,7 +7209,7 @@ Ability: Guts
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Peck
 - Quick Attack
-- U-turn
+- Roost
 - Work Up
 
 Murkrow @ Scope Lens
@@ -7221,7 +7221,7 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 - Swagger
 - Torment
 
-Noctowl @ Focus Sash
+Noctowl @ Focus Band
 Level: 11
 Ability: Tinted Lens
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
